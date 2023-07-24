@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/estiloevento.css">
+    <link rel="stylesheet" href="css/evento/cssevento.css">
     <title>Evento</title>
 </head>
 <body>
@@ -42,7 +42,7 @@
   <main class="container">
     <div class="row m-1 main-imgevent">
       <div class="col-md-12 img-fluid" >
-          <img src="img/portada.jpg" width="100%" height="auto">
+          <img src="img/evento/portada.jpg" width="100%" height="auto">
       </div>
       
     </div>
@@ -86,7 +86,7 @@
             <ul class="list-unstyled">
               <li>
                 <a class="d-flex flex-column flex-lg-row gap-3 align-items-start align-items-lg-center py-3 link-body-emphasis text-decoration-none border-top" href="https://www.identitymission.org/?fbclid=IwAR2eeb5igHwvXFG98xwwT5COB3pKOKb0Oy1qZa8ZPMYV44ux75oE-kACPb8">
-                  <img class="bd-placeholder-img" width="100%" height="96" src="logo patrocinador.png" alt="">
+                  <img class="bd-placeholder-img" width="100%" height="96" src="img/evento/logo_patrocinador.jpg" alt="">
                   
                 </a>
               </li>

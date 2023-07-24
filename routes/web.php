@@ -13,6 +13,24 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+//All of these are the routes of the URL. 
+
+// Route for Event 
+Route::get('/evento', function () {
+    return view('./Evento/evento');
+});
+
+// Route for List Event 
+Route::get('/Lista_Evento', function () {
+    return view('./Lista_Evento/listEvent');
+});
+
+// Route for Signin 
+Route::get('/signin', function () {
+    return view('./Sign_in/signin');
+});
+
+// Route for Profile
+Route::get('/Perfil', function () {
+    return view('./Perfil/profile');
 });
