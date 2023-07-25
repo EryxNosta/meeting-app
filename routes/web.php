@@ -15,6 +15,16 @@ use Illuminate\Support\Facades\Route;
 
 //All of these are the routes of the URL. 
 
+// Route for Index
+Route::get('Pagina_Index', function () {
+    return view('./Pagina_Index/index');
+});
+
+// Route for the Index
+Route::get('/', function () {
+    return view('./Pagina_Index/index');
+});
+
 // Route for Event 
 Route::get('/evento', function () {
     return view('./Evento/evento');
@@ -34,3 +44,4 @@ Route::get('/signin', function () {
 Route::get('/Perfil', function () {
     return view('./Perfil/profile');
 });
+

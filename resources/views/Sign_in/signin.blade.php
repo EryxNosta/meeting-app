@@ -21,7 +21,7 @@
           <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
                 <li class="nav-item">
-                    // blade call for other pages - redirection use the php call echo.
+                    {{-- blade call for other pages - redirection use the php call echo. --}}
                     <a class="nav-link" href="{{url('Lista_Evento')}}">Organizar</a>
                 </li>
                 <li class="nav-item">
@@ -45,6 +45,8 @@
           </div>
       </div>
     </nav>  
+    
+    
     
     <div class="signin d-flex justify-content-center align-items-center">
         <main class="form-signin w-100 m-10">        
@@ -73,7 +75,7 @@
                 </label>-->
                                 
             </form>
-        </main>
+        </main> 
 
     </div>    
 
