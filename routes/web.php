@@ -15,6 +15,11 @@ use Illuminate\Support\Facades\Route;
 
 //All of these are the routes of the URL. 
 
+// Route for Create Events
+Route::get('/', function () {
+    return view('./Creacion_Eventos/crearEventos');
+});
+
 // Route for Index
 Route::get('Pagina_Index', function () {
     return view('./Pagina_Index/index');
