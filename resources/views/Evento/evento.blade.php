@@ -55,8 +55,7 @@
         </h3>
   
         <article class="blog-post">
-          <h4 class="display-5 link-body-emphasis mb-1">Obra Teatral a Beneficio de Mision Identidad. </h4>
-          <p class="blog-post-meta">Fecha del evento: Sábado 23 de septiembre 2023.</p>            
+          <h4 class="display-5 link-body-emphasis mb-1">Descripción: </h4>           
           <p class="">Obra de Teatro "CIPOTES" Una adaptacion del libro de Ramon Amaya Amador. La obra incluye la dolorosa realidad que viven dos hermanitos por sobrevivir solos, sin sus padres. Una realidad que aun es vivida en nuestro pais. El evento es a beneficio de Mision Identidad, quienes se esfuerzan por buscar soluciones en familia para NNA vulnerables. Con el donativo y apoyo de La Teatral Sampedrana y Ministerio AMADA se llevara a cabo la obra de Teatro Cipotes el dia 23 de Septiembre, 2023 en las instalaciones de Centro Cultural Infantil en San Pedro Sula. El evento tiene un costo de L400 por persona.</p>
           <hr>           
           <button type="button" class="btn btn-primary btn-lg tealb redc">Reservar</button>      
@@ -67,18 +66,15 @@
         <div class="position-sticky" style="top: 2rem;">
           <div class="p-4 mb-3 bg-body-tertiary rounded yellowb">
             <h4 class="fst-italic">Información general</h4>
-            <h5 >Lugar:</h5>
+            <br>
+            <h5 >Dirección:</h5>
             <p class="mb-0">Centro Cultural Infantil Centro Cultural Infantil San Pedro Sula, Cortés Department 21104.</p>
             <br>
             <h5 >Fecha:</h5>
             <p class="mb-0">Sábado 23 de septiembre 2023.</p>
             <br>
             <h5 >Precio por persona:</h5>
-            <p class="mb-0">Lps. 400.00 en preventa (válido para julio y agosto).</p>
-            <p class="mb-0">Lps. 500.00 en boleteria (válido para septiembre).</p>
-            <br>
-            <h5 >Duración del evento:</h5>
-            <p class="mb-0">3 horas</p>
+            <p class="mb-0">Lps. 400.00 </p>
           </div>
   
           <div>
@@ -87,6 +83,7 @@
               <li>
                 <a class="d-flex flex-column flex-lg-row gap-3 align-items-start align-items-lg-center py-3 link-body-emphasis text-decoration-none border-top" href="https://www.identitymission.org/?fbclid=IwAR2eeb5igHwvXFG98xwwT5COB3pKOKb0Oy1qZa8ZPMYV44ux75oE-kACPb8">
                   <img class="bd-placeholder-img" width="100%" height="96" src="img/evento/logo_patrocinador.jpg" alt="">
+                
                   
                 </a>
               </li>
