@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,40 +14,22 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-//All of these are the routes of the URL. 
-
-// Route for Create Events
 Route::get('/', function () {
-    return view('./Creacion_Eventos/crearEventos');
+    return view('./Pagina_Index/index');
 });
 
-// Route for Index
 Route::get('Pagina_Index', function () {
     return view('./Pagina_Index/index');
 });
 
-// Route for the Index
-Route::get('/', function () {
-    return view('./Pagina_Index/index');
+Route::get('/dashboard', function () {
+    return view('dashboard');
+})->middleware(['auth', 'verified'])->name('dashboard');
+
+Route::middleware('auth')->group(function () {
+    Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
+    Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
+    Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-// Route for Event 
-Route::get('/evento', function () {
-    return view('./Evento/evento');
-});
-
-// Route for List Event 
-Route::get('/Lista_Evento', function () {
-    return view('./Lista_Evento/listEvent');
-});
-
-// Route for Signin 
-Route::get('/signin', function () {
-    return view('./Sign_in/signin');
-});
-
-// Route for Profile
-Route::get('/Perfil', function () {
-    return view('./Perfil/profile');
-});
-
+require __DIR__.'/auth.php';
