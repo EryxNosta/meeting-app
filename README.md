@@ -58,9 +58,9 @@ Al asegurarnos que hayamos clonado correctamente el repositorio, procedemos a ab
 
 Breeze:
 
-    line 1 of `php artisan breeze:install blade` 
-    line 2 of `php artisan migrate`
-    line 3 of `npm run dev`
+    `php artisan breeze:install blade` 
+    `php artisan migrate`
+    `npm run dev`
 + En su defecto, Breeze crea la forma de login en welcome.blade.php así que lo cambiaremos a nuestro index siguiendo estos pasos:
     - Irse al root de todo el proyecto y encontrar la carpeta llamada **routes**
     - Abrir esta misma y abrir el archivo web.php
