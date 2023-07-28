@@ -43,7 +43,7 @@ Luego, procedemos a clonar el repositorio [Juntáte](https://github.com/EryxNost
 
 Al asegurarnos que hayamos clonado correctamente el repositorio, procedemos a abrir VS Code
 + Acá buscamos en la carpeta general de nuestra plataforma y busca el archivo llamado `.env.example`
-    - Cambia el nombre `.env.example` por `.env` para que se ajuste a la base de datos de Laragon, ya que por defecto este archivo no se sube a GitHub por la información sensible en el archivo.      
+    - Cambia el nombre `.env.example` por `.env` para que se ajuste a la base de datos de Laragon, ya que por defecto este archivo no se sube a GitHub por lo sensible del mismo. 
 + Luego de ese cambio de nombre, abre Laragon y haz click en el botón **Start All**
   - Esto subirá localmente el servidor de Apache y MySQL para trabajar cómodamente.
 +  Luego, Click en el botón "Terminal"
