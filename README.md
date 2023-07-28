@@ -54,3 +54,6 @@ Breeze:
     line 2 of `php artisan migrate`
     line 3 of `npm run dev`
 
+Luego de la instalación necesaria, procedemos a abrir Laragon y pasar a la `terminal` y escribir el siguiente comando:
++ `php artisan serve`
+    - Esto creará un servidor local en brackets []. Cópialo en tu URL y tará! 
