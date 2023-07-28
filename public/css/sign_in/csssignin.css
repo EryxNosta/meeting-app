@@ -1,0 +1,68 @@
+@media only screen and (max-width: 320px) {
+       
+    .signin {
+        
+        max-width: 400px !important;        
+        min-height: calc(40vh - 20px) !important;
+        padding: 10px !important;   
+    }
+    
+}
+
+body {
+    background-image: url(/img/sign_in/bglogin.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;    
+    max-height: 100vh;
+    overflow-y: auto;    
+    display: flex;
+    flex-direction: column;    
+}
+
+.main {
+    flex: 1 !important;
+}
+
+.signin {
+    width: 100%;
+    max-width: 450px;
+    margin: 0 auto;
+    display: flex;
+    min-height: calc(90vh - 1px);
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center; 
+    padding: 20px;   
+}
+
+.navyc {
+    color: #00235B !important;    
+}
+
+.navyb {    
+    background-color: #00235B !important;
+}
+
+.redc {
+    color: #E21818 !important;
+}
+
+.redb {
+    background-color: #E21818 !important;
+}
+
+.yellowc {
+    color:#FFDD83 !important;
+}
+
+.yellowb {
+    background-color: #FFDD83 !important;
+}
+
+.tealc {
+    color: #98DFD6 !important;
+}
+
+.tealb {
+    background-color: #98DFD6 !important;
+}

@@ -1,0 +1,28 @@
+.main-img {
+    background-image: url(/img/pagina_index/img-events.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 500px;
+    display: flex;
+}
+
+.bg-navbar{
+    background-color: #00235B;
+}
+
+.bg-y{
+    background-color: #FFDD83;
+}
+
+.txt-red{
+    color: #E21818 !important;
+}
+
+.color {
+    color: #FFDD83;
+}
+
+.main-info {
+    margin-top: 120px;
+    float: left;
+}
