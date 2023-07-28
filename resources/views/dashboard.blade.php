@@ -1,4 +1,3 @@
-
 {{-- Esta parte del código es para los procedimientos de inicio de sesión, podemos modificar el
     código de bootstrap, pero evite cambiar {{ __('Dashboard') }} y {{ __("You're logged in!") }}  
     (pero podemos cambiar el nombre interno a lo que se necesite)

@@ -18,11 +18,6 @@ Route::get('/', function () {
     return view('./Pagina_Index/index');
 });
 
-Route::get('/Lista_Evento', function () {
-    return view('./Lista_Evento/listEvent');
-});
-
-
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
