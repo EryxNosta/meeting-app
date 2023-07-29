@@ -39,8 +39,8 @@ ___
 
 Luego, procedemos a clonar el repositorio [Juntáte](https://github.com/EryxNosta/meeting-app)
 
-+ procedemos a clonar el repositorio Juntáte, para esto se debe apachurrar el botón `< >code` (botón verde, localizado en la página defecto del repositorio https://github.com/EryxNosta/meeting-app)
-    -  Aparecerá un link en el apartado SSH (que ya aparece abierto), el cual debe copiar o pulsar el botón de `copiar (botón al lado del link)`
++ procedemos a clonar el repositorio `Juntáte`, para esto se debe apachurrar el botón `< >code` (botón verde, localizado en la página defecto del repositorio `https://github.com/EryxNosta/meeting-app`)
+    -  Aparecerá un link en el apartado `SSH` (que ya aparece abierto), el cual debe copiar o pulsar el botón de `copiar (botón al lado del link)`
     -  Se va al Visual Studio Code nuevamente y en los botones del lado izquierdo, pulsamos la tercera opción que es el botón `source control`, luego pulsamos la opción `clone repository`.
     - Pegamos el link en el recuadro abierto y pulsamos en `clone from Github`.
     - Luego elegimos el proyecto `EryxNosta/meeting-app`, aparecerá una ventana para guardar la clonación del proyecto, para lo cual elegimos la carpeta de Laragon con nombre `www` y pulsamos el botón `select as repository destination`.
@@ -49,23 +49,22 @@ Luego, procedemos a clonar el repositorio [Juntáte](https://github.com/EryxNost
 
 Al asegurarnos que hayamos clonado correctamente el repositorio, procedemos a abrir VS Code
 
-+ Acá buscamos en la carpeta general de nuestra plataforma de Visual Studio Code y busca el archivo llamado `.env.example`
++ Acá buscamos en la carpeta general (o mejor conocida como root) de nuestra plataforma de Visual Studio Code y busca el archivo llamado `.env.example`
     - Hacemos click derecho sobre el nombre del archivo `.env.example`
-    - Elegimos la opción `rename` para cambiar el nombre a `.env` para que se ajuste a la base de datos de Laragon, ya que por defecto, no se sube a GitHub.  
-+ Luego de ese cambio de nombre, abre Laragon nuevamente y haz click en el botón **Start All** (iniciar todo)
-  - Esto subirá localmente el servidor de Apache y MySQL para trabajar cómodamente.
-+  Luego, Click en el botón "Terminal"
+    - `Apachurra click derecho` o `F5` para elegir la opción `rename` para cambiar el nombre a `.env` para que se ajuste a la base de datos de Laragon.  
++ Luego de ese cambio de nombre, abre Laragon nuevamente y haz click en el botón **`Start All`** (iniciar todo)
+  - Esto subirá localmente el servidor de `Apache y MySQL` para trabajar cómodamente.
++  Luego, Click en el botón `"Terminal"`
     - Esto abrirá la terminal de comandos de Laragon para poder instalar las siguientes dependencias. 
 +  Al abrir la terminal, por su defecto nos llevará a `C:\laragon\www` o donde se haya instalado Laragon. En la línea de comando escribir:
     - `cd meeting-app` que nos direccionará correctamente a la carpeta de proyecto. Estando acá, ya podremos instalar las dependencias.       
 +  Escribir en la terminal `install composer` (dejar que se instale y seguir con el siguiente paso)
-+  Como es la primera vez que se generará el proyecto, se necesita una llave de autenticación con la base de datos. Así que pon esto en la terminal `php artisan key:generate`
++  Como es la primera vez que se generará el proyecto, se necesitará una llave de autenticación con la base de datos. Así que pon esto en la terminal `php artisan key:generate`
     - Esto asegurará que se generé automáticamente la llave y no incurramos a mayor problema en el proceso de instalación.
 +  Instalamos Node con el comando `npm install` y esperamos que instale.
 +  Seguir el formado y orden para instalar Breeze, que solamente es esperar a instalar y seguir con el siguiente comando: 
 
 Breeze:
-
     `php artisan breeze:install blade` 
     `php artisan migrate`
     `npm run dev`
