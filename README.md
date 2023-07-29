@@ -39,21 +39,29 @@ ___
 
 Luego, procedemos a clonar el repositorio [Juntáte](https://github.com/EryxNosta/meeting-app)
 
++ procedemos a clonar el repositorio Juntáte, para esto se debe apachurrar el botón `< >code` (botón verde, localizado en la página defecto del repositorio https://github.com/EryxNosta/meeting-app)
+    -  Aparecerá un link en el apartado SSH (que ya aparece abierto), el cual debe copiar o pulsar el botón de `copiar (botón al lado del link)`
+    -  Se va al Visual Studio Code nuevamente y en los botones del lado izquierdo, pulsamos la tercera opción que es el botón `source control`, luego pulsamos la opción `clone repository`.
+    - Pegamos el link en el recuadro abierto y pulsamos en `clone from Github`.
+    - Luego elegimos el proyecto `EryxNosta/meeting-app`, aparecerá una ventana para guardar la clonación del proyecto, para lo cual elegimos la carpeta de Laragon con nombre `www` y pulsamos el botón `select as repository destination`.
+
 ***
 
 Al asegurarnos que hayamos clonado correctamente el repositorio, procedemos a abrir VS Code
-+ Acá buscamos en la carpeta general de nuestra plataforma y busca el archivo llamado `.env.example`
-    - Cambia el nombre `.env.example` por `.env` para que se ajuste a la base de datos de Laragon, ya que por defecto este archivo no se sube a GitHub por lo sensible del mismo. 
-+ Luego de ese cambio de nombre, abre Laragon y haz click en el botón **Start All**
+
++ Acá buscamos en la carpeta general de nuestra plataforma de Visual Studio Code y busca el archivo llamado `.env.example`
+    - Hacemos click derecho sobre el nombre del archivo `.env.example`
+    - Elegimos la opción `rename` para cambiar el nombre a `.env` para que se ajuste a la base de datos de Laragon, ya que por defecto, no se sube a GitHub.  
++ Luego de ese cambio de nombre, abre Laragon nuevamente y haz click en el botón **Start All** (iniciar todo)
   - Esto subirá localmente el servidor de Apache y MySQL para trabajar cómodamente.
 +  Luego, Click en el botón "Terminal"
     - Esto abrirá la terminal de comandos de Laragon para poder instalar las siguientes dependencias. 
 +  Al abrir la terminal, por su defecto nos llevará a `C:\laragon\www` o donde se haya instalado Laragon. En la línea de comando escribir:
-    - `cd meeting-app` que nos direccionará correcatamente a la carpeta de proyecto. Estando acá, ya podremos instalar las dependencias.       
+    - `cd meeting-app` que nos direccionará correctamente a la carpeta de proyecto. Estando acá, ya podremos instalar las dependencias.       
 +  Escribir en la terminal `install composer` (dejar que se instale y seguir con el siguiente paso)
 +  Como es la primera vez que se generará el proyecto, se necesita una llave de autenticación con la base de datos. Así que pon esto en la terminal `php artisan key:generate`
-    - Esto asegurará que se generé automáticamente la llave y no incurramos a mayor problema en el proceso de instalación
-+  Instalamos node con el comando `npm Node` y esperamos que instale.
+    - Esto asegurará que se generé automáticamente la llave y no incurramos a mayor problema en el proceso de instalación.
++  Instalamos Node con el comando `npm install` y esperamos que instale.
 +  Seguir el formado y orden para instalar Breeze, que solamente es esperar a instalar y seguir con el siguiente comando: 
 
 Breeze:
@@ -61,22 +69,32 @@ Breeze:
     `php artisan breeze:install blade` 
     `php artisan migrate`
     `npm run dev`
-+ En su defecto, Breeze crea la forma de login en welcome.blade.php así que lo cambiaremos a nuestro index siguiendo estos pasos:
-    - Irse al root de todo el proyecto y encontrar la carpeta llamada **routes**
-    - Abrir esta misma y abrir el archivo web.php
-    - Acá buscaremos la siguiente ruta:
++ Breeze creará la página de login en welcome.blade.php (que es como un index, que por defecto se crea).
++ Así que lo cambiaremos a nuestro index siguiendo estos pasos:
+    - Irse al Visual Studio Code y al root de todo el proyecto y encontrar la carpeta llamada **`views`**
+    - Abrir esta misma y seguir el orden de apertura de archivos `views > Pagina_Index > index.blade.php`
+    - Por los momentos, déjala abierta en ese archivo, ya que lo necesitaremos de referencia luego.
+ 
++ Luego, dentro de la carpeta root de todo el proyecto, vamos a irnos a la carpeta llamada  **`routes`**
+    - Al estar acá apachurrala y abre el archivo llamado `web.php`
+    - una vez abierto este archivo, verás este código a tu derecha:  
 ```
 Route::get('/', function () {
     return view('welcome');
 });
 ```
-+ Al estar acá, buscamos la siguiente carpeta en root del proyecto llamada `Resources>Views>Pagina_Index>index`
-+ Luego, reemplazamos la ruta por defecto de welcome por index, del siguiente modo:
++ ¿Recuerdas  `views > Pagina_Index > index.blade.php`? Ahora necesitaremos de esta ruta para cambiar parte del código anterior que se encuentra en `web.php`. 
++ Teniendo en cuenta el orden en donde está `index.blade.php`, procedemos a cambiar el `welcome`, por la ruta de nuestro index, que es `./Pagina_Index/index`
+    - Quedaría de esta forma:
 ```
 Route::get('/', function () {
     return view('./Pagina_Index/index');
 });
 ```
-Con esto hecho, nos aseguramos que la forma de autenticación es redirigida a nuestro index de proyecto. Luego de estos pasos seguidos, procedemos a abrir Laragon y pasar a la `terminal` y escribir el siguiente comando:
++ Con esto hecho, nos aseguramos que hemos cambiado el index previo, por el de nuestro repositorio. 
+
+Luego de estos pasos seguidos, procedemos a abrir nuevamente Laragon y pasar a la misma `terminal` y escribir el siguiente comando:
 + `php artisan serve`
-    - Esto creará un servidor local en brackets []. Cópialo en tu URL y tará, bienvenido a la plataforma. 
+    - Esto armará un servidor local específico para nuestro proyecto que estará en brackets de este modo `[http://127.0.0.1:5000]`. El puerto puede variar, dependiendo tu sistema.
+    - Procede a copiar el `http://127.0.0.1:5000` y pégalo en tu navegador/
+    - Apachurra `Enter` y tendrías que tener acceso a la plataforma. 
