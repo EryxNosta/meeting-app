@@ -51,14 +51,14 @@ Al asegurarnos que hayamos clonado correctamente el repositorio, procedemos a ab
 
 + Acá buscamos en la carpeta general (o mejor conocida como root) de nuestra plataforma de Visual Studio Code y busca el archivo llamado `.env.example`
     - Hacemos click derecho sobre el nombre del archivo `.env.example`
-    - `Apachurra click derecho` o `F5` para elegir la opción `rename` para cambiar el nombre a `.env` para que se ajuste a la base de datos de Laragon.  
+    - `Apachurra click derecho` o `F2` para elegir la opción `rename` para cambiar el nombre a `.env` para que se ajuste a la base de datos de Laragon.  
 + Luego de ese cambio de nombre, abre Laragon nuevamente y haz click en el botón **`Start All`** (iniciar todo)
   - Esto subirá localmente el servidor de `Apache y MySQL` para trabajar cómodamente.
 +  Luego, Click en el botón `"Terminal"`
     - Esto abrirá la terminal de comandos de Laragon para poder instalar las siguientes dependencias. 
 +  Al abrir la terminal, por su defecto nos llevará a `C:\laragon\www` o donde se haya instalado Laragon. En la línea de comando escribir:
     - `cd meeting-app` que nos direccionará correctamente a la carpeta de proyecto. Estando acá, ya podremos instalar las dependencias.       
-+  Escribir en la terminal `install composer` (dejar que se instale y seguir con el siguiente paso)
++  Escribir en la terminal `composer install` (dejar que se instale y seguir con el siguiente paso)
 +  Como es la primera vez que se generará el proyecto, se necesitará una llave de autenticación con la base de datos. Así que pon esto en la terminal `php artisan key:generate`
     - Esto asegurará que se generé automáticamente la llave y no incurramos a mayor problema en el proceso de instalación.
 +  Instalamos Node con el comando `npm install` y esperamos que instale.
