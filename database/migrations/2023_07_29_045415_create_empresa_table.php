@@ -12,13 +12,15 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('empresa', function (Blueprint $table) {
-            $table->bigIncrements('emp_Id')->unsigned();
+            $table->bigIncrements('emp_id');
             $table->string('emp_nom');
-            $table->string('emp_tel');
-            $table->string('emp_rtn');
-            $table->unsignedBigInteger('User_type');
-            $table->foreign('User_type')->references('User_Id')->on('usuario');
+            $table->string('emp_tel');            
+            $table->string('emp_rtn');            
+            $table->string('emp_email');            
+            $table->string('emp_password');
+            $table->bigInteger('user_id')->unsigned();          
             $table->timestamps();
+            $table->foreign('user_id')->references('user_id')->on('usuario');
         });
     }
 
@@ -30,4 +32,3 @@ return new class extends Migration
         Schema::dropIfExists('empresa');
     }
 };
-

@@ -8,15 +8,18 @@ use Illuminate\Database\Eloquent\Model;
 class usuario extends Model
 {
     use HasFactory;
-    public $timestamps = false;
     protected $table = 'usuario';
-    protected $primarykey = 'User_Id'
-
+    protected $primaryKey = 'user_id';
+    public $timestamps = true;
+    
     public function empresa()
     {
-        return $this->belongsTo(empresa::class);
-        
+        return $this->hasOne(Empresa::class, 'user_id', 'user_id');
     }
-    
+
+    public function cliente()
+    {
+        return $this->hasOne(Cliente::class, 'user_id', 'user_id');
+    }
 
 }
