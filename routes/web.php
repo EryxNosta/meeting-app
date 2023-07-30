@@ -18,6 +18,8 @@ use Illuminate\Support\Facades\Route;
 // Solamente tienen que agarrar el nombre de la carpeta del archivo y pegarlo en el URL.
 // Ejemplo: Quiero entrar a la vista de eventos, entonces sería http://127.0.0.1:8000/Evento 
 
+Route::get('/', [landingController::class, 'index'])->name('landing.index');
+
 Route::get('/Creacion_Eventos', function () {
     return view('.Creacion_Eventos/crearEventos');
 });
