@@ -12,9 +12,15 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('pago', function (Blueprint $table) {
-            $table->bigIncrements('pag_Id');
-            $table->integer('clie_Id');
+            $table->bigIncrements('pag_id');
+            $table->dateTime('pag_date');
+            $table->double('pag_total', 8, 2);
+            $table->string('pag_det');
+            $table->bigInteger('clie_id')->unsigned(); 
+            $table->bigInteger('even_id')->unsigned(); 
             $table->timestamps();
+            $table->foreign('clie_id')->references('clie_id')->on('cliente');
+            $table->foreign('even_id')->references('even_id')->on('evento');
         });
     }
 
