@@ -30,12 +30,27 @@ ___
 4. Node (desde terminal y en pasos posteriores se explica)
 5. Composer (desde terminal)
 6. Breeze (desde terminal)
+7. Git
 ___
 
 ##### _Nota:_ Debemos de tener instalados los programas bases antes de proceder con los siguientes pasos:
 1. [Laragon](https://laragon.org/index.html)
 2. [VS Code](https://code.visualstudio.com) 
-3. [Laravel](https://laravel.com) 
+3. [Laravel](https://laravel.com)
+4. Git 
+
+### Pasos para instalar Git
++ Descarga el instalador de Git desde el sitio web oficial: <https://git-scm.com/downloads>
++ Haz clic en el botón "Descargar" y selecciona la versión de Git que deseas instalar. Si no tienes experiencia previa con Git, te recomiendo instalar la versión más reciente.
++ Una vez descargado, haz clic en el archivo ".exe" para iniciar la instalación.
++ En la pantalla de bienvenida, haz clic en "Siguiente".
++ En la página de opciones de instalación, puedes elegir la ubicación donde quieres instalar Git. Puedes aceptar la ubicación predeterminada o seleccionar una diferente. También puedes elegir si deseas agregar Git a tu menú Iniciar de Windows.
++ Haz clic en "Siguiente".
++ En la página de configuración de la plataforma, selecciona la plataforma que deseas instalar. Por defecto, se selecciona la plataforma de 64 bits, pero si tu sistema es de 32 bits, selecciona la plataforma correspondiente.
++ Haz clic en "Siguiente".
++ En la página de confirmación de la instalación, revisa los detalles de la instalación y haz clic en "Instalar".
++ Una vez instalado, haz clic en "Finalizar".
++ Abre una ventana de Command Prompt o PowerShell para verificar que Git esté instalado correctamente. Puedes hacer esto escribiendo git --version y presionando Enter.
 
 Luego, procedemos a clonar el repositorio [Juntáte](https://github.com/EryxNosta/meeting-app)
 
