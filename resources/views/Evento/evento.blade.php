@@ -8,36 +8,47 @@
     <title>Evento</title>
 </head>
 <body>
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark navyb">
-    <div class="container-fluid">
-        <a class="navbar-brand" href="index.html">Meeting APP</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Organizar</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Eventos</a>
-                </li>
-            </ul>
-            <nav class="navbar bg-dark">
-                <div class="container-fluid">
-                    <form class="d-flex" role="search">
-                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                        <button class="btn btn-outline-primary" type="submit">Search</button>
-                    </form>
-                </div>
-            </nav>
-            <div class="btn-group" role="group" aria-label="Basic example">
-                <button type="button" class="btn btn-primary">Registrarse</button>
-                <button type="button" class="btn btn-primary">Iniciar Sesion</button>
-            </div>
-        </div>
-    </div>
-  </nav>  
+  <nav class="navbar navbar-expand-lg navbar-dark bg-navbar">
+          <div class="container-fluid">
+              <a class="navbar-brand" href="index.html">Meeting APP</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                  <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
+                      <li class="nav-item">
+                          <a class="nav-link" href="#">Organizar</a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link" href="#">Eventos</a>
+                      </li>
+                  </ul>
+                  <nav class="navbar bg-navbar">
+                      <div class="container-fluid">
+                          <form class="d-flex" role="search">
+                              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                              <button class="btn btn-outline-primary" type="submit">Search</button>
+                          </form>
+                      </div>
+                  </nav>
+                  <div class="btn-group" role="group" aria-label="Basic example">
+                    @if (Route::has('login'))
+                    <div class="sm:fixed sm:top-0 sm:right-0 p-6 text-right z-10">
+                        @auth
+                            <a href="{{ url('/dashboard') }}" class="font-semibold text-gray-600 hover:text-gray-900 focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Dashboard</a>
+                        @else
+                            <a href="{{ route('login') }}" class="font-semibold text-gray-600 hover:text-gray-900 focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Log in</a>
+    
+                            @if (Route::has('register'))
+                                <a href="{{ route('register') }}" class="ml-4 font-semibold text-gray-600 hover:text-gray-900 focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Registrate</a>
+                            @endif
+                        @endauth
+                    </div>
+                @endif
+                  </div>
+              </div>
+          </div>
+        </nav> 
  
   <main class="container">
     <div class="row m-1 main-imgevent">
