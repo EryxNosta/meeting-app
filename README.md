@@ -116,7 +116,7 @@ Route::get('/', function () {
 ```
 + Con esto hecho, nos aseguramos que hemos cambiado el index previo, por el de nuestro repositorio. 
 
-Luego de estos pasos seguidos, procedemos a abrir nuevamente Laragon y abrir una nueva `terminal`
++ Luego de estos pasos seguidos, procedemos a abrir nuevamente Laragon y abrir una nueva `terminal`
     - Puedes abrir una nueva terminal con la combinación de `Ctrl + T` 
     - Luego de crearse, en la segunda casilla que dice `Startup directory for new process:` elige donde está alojado tu proyecto. 
     - Luego, apachurra `Start` y esto creará la nueva terminal. 
