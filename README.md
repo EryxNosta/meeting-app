@@ -77,7 +77,16 @@ Al asegurarnos que hayamos clonado correctamente el repositorio, procedemos a ab
 +  Como es la primera vez que se generará el proyecto, se necesitará una llave de autenticación con la base de datos. Así que pon esto en la terminal `php artisan key:generate`
     - Esto asegurará que se generé automáticamente la llave y no incurramos a mayor problema en el proceso de instalación.
 +  Instalamos Node con el comando `npm install` y esperamos que instale.
-+  Seguir el formado y orden para instalar Breeze, que solamente es esperar a instalar y seguir con el siguiente comando: 
+
+## Parte impotante: En caso ya tener una base de datos previa del mismo proyecto, proceder a realizar los siguientes pasos:
++  Abrir Laragon y seleccionar `Database`
++  Acá apareceerá una ventana con nombre `Session Manager`
++  En la parte de abajo, darle lick a `Open` y no tocar las demás opciones.
++  Luego, apareran dos columnas grandes. Ubícate en la izquierda y busca una base de datos llamada `laravel`
++  Haz click en la flechita `>` para expandir el menu.
+    - DATO IMPORTANTE: Si ves que la base de datos de `laravel` está vacía, entonces no tendrás problema en hacer las migraciones y puedes seguir con los pasos siguientes para instalar `Breeze`.
+    - Esto se debe a que si hay tablas previas de clonaciones pasadas, al crear la migración, puede causar un error de migración y la única forma, es borrándo cada tabla para dejar vacía la base de datos.
++  Seguir el formato y orden para instalar `Breeze`, que solamente es esperar a instalar y seguir con el siguiente comando: 
 
 Breeze:
     `php artisan breeze:install blade` 
@@ -107,7 +116,12 @@ Route::get('/', function () {
 ```
 + Con esto hecho, nos aseguramos que hemos cambiado el index previo, por el de nuestro repositorio. 
 
-Luego de estos pasos seguidos, procedemos a abrir nuevamente Laragon y pasar a la misma `terminal` y escribir el siguiente comando:
++ Luego de estos pasos seguidos, procedemos a abrir nuevamente Laragon y abrir una nueva `terminal`
+    - Puedes abrir una nueva terminal con la combinación de `Ctrl + T` 
+    - Luego de crearse, en la segunda casilla que dice `Startup directory for new process:` elige donde está alojado tu proyecto. 
+    - Luego, apachurra `Start` y esto creará la nueva terminal. 
+
+Por ultimo paso escribir el siguiente comando:
 + `php artisan serve`
     - Esto armará un servidor local específico para nuestro proyecto que estará en brackets de este modo `[http://127.0.0.1:5000]`. El puerto puede variar, dependiendo tu sistema.
     - Procede a copiar el `http://127.0.0.1:5000` y pégalo en tu navegador/
