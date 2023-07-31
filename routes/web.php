@@ -22,6 +22,12 @@ Route::get('/Evento', function () {
     return view('./Evento/evento');
 });
 
+Route::get('/Creacion_Eventos', function () {
+    return view('./Creacion_Eventos/crearEventos');
+});
+
+
+
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
