@@ -12,80 +12,79 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="index.html">Meeting APP</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Organizar</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Eventos</a>
-                        </li>
-                    </ul>
-                    <form class="d-flex" role="search">
-                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                        <button class="btn btn-outline-primary" type="submit">Search</button>
-                    </form>
-                    <div class="d-flex justify-content-end mt-2 mr-3">
-                        <button type="button" class="btn btn-primary me-2">Registrarse</button>
-                    </div>
-                </div>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark navyb">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">Meeting APP</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
+                  <li class="nav-item">
+                      <a class="nav-link" href="#">Organizar</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="#">Eventos</a>
+                  </li>
+              </ul>
+              <nav class="navbar bg-dark">
+                  <div class="container-fluid">
+                      <form class="d-flex" role="search">
+                          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                          <button class="btn btn-outline-primary" type="submit">Search</button>
+                      </form>
+                  </div>
+              </nav>
             </div>
-        </nav>  
-        <x-guest-layout>
-            <!-- Session Status -->
-            <x-auth-session-status class="mb-4" :status="session('status')" />
+        </div>
+        </nav>
+    <x-guest-layout>
+        <!-- Session Status -->
+        <x-auth-session-status class="mb-4" :status="session('status')" />
 
-                
+        <form method="POST" action="{{ route('login') }}">
+            @csrf
+            
+            <!-- Email Address -->
+            <div>
+                <x-input-label for="email" :value="__('Email')" />
+                <x-text-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autofocus autocomplete="username" />
+                <x-input-error :messages="$errors->get('email')" class="mt-2" />
+            </div>
 
-                <form method="POST" action="{{ route('login') }}">
-                    @csrf
+            <!-- Password -->
+            <div class="mt-4">
+                <x-input-label for="password" :value="__('Password')" />
 
-                        <!-- Email Address -->
-                        <div>
-                            <x-input-label for="email" :value="__('Email')" />
-                            <x-text-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autofocus autocomplete="username" />
-                            <x-input-error :messages="$errors->get('email')" class="mt-2" />
-                        </div>
+                <x-text-input id="password" class="block mt-1 w-full"
+                                type="password"
+                                name="password"
+                                required autocomplete="current-password" />
 
-                        <!-- Password -->
-                        <div class="mt-4">
-                            <x-input-label for="password" :value="__('Password')" />
+                <x-input-error :messages="$errors->get('password')" class="mt-2" />
+            </div>
 
-                            <x-text-input id="password" class="block mt-1 w-full"
-                                            type="password"
-                                            name="password"
-                                            required autocomplete="current-password" />
+            <!-- Remember Me -->
+            <div class="block mt-4">
+                <label for="remember_me" class="inline-flex items-center">
+                    <input id="remember_me" type="checkbox" class="rounded border-gray-300 text-indigo-600 shadow-sm focus:ring-indigo-500" name="remember">
+                        <span class="ml-2 text-sm text-gray-600">{{ __('Remember me') }}</span>
+                </label>
+            </div>
 
-                            <x-input-error :messages="$errors->get('password')" class="mt-2" />
-                        </div>
+            <div class="flex items-center justify-end mt-4">
+                @if (Route::has('password.request'))
+                    <a class="underline text-sm text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" href="{{ route('password.request') }}">
+                        {{ __('Forgot your password?') }}
+                    </a>
+                @endif
 
-                        <!-- Remember Me -->
-                        <div class="block mt-4">
-                            <label for="remember_me" class="inline-flex items-center">
-                                <input id="remember_me" type="checkbox" class="rounded border-gray-300 text-indigo-600 shadow-sm focus:ring-indigo-500" name="remember">
-                                <span class="ml-2 text-sm text-gray-600">{{ __('Remember me') }}</span>
-                            </label>
-                        </div>
-
-                        <div class="flex items-center justify-end mt-4">
-                            @if (Route::has('password.request'))
-                                <a class="underline text-sm text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" href="{{ route('password.request') }}">
-                                    {{ __('Forgot your password?') }}
-                                </a>
-                            @endif
-
-                            <x-primary-button class="ml-3 tealb redc">
-                                {{ __('Log in') }}
-                            </x-primary-button>
-                        </div>
-                </form>
-        </x-guest-layout>
+                <x-primary-button class="ml-3 tealb redc">
+                    {{ __('Log in') }}
+                </x-primary-button>
+            </div>
+        </form>
+    </x-guest-layout>
            
 
     <footer class="py-3 my-4 border-top yellowb d-flex flex-wrap justify-content-between align-items-center">
@@ -100,7 +99,7 @@
         </ul>
     </footer>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHkM9GAe6s3Gfu6zJP5E1iKfg5V8P1BHb8Hs1gezFksPe3jGp2KZ8CY1D" crossorigin="anonymous"></script>
+    
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
 </body>
