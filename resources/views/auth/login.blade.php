@@ -7,7 +7,7 @@
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Hugo 0.112.5">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
-    
+    <link rel="stylesheet" href="/css/evento/cssevento.css">
     <title>Signin</title>      
 </head>
 
@@ -27,23 +27,20 @@
                     <a class="nav-link" href="#">Eventos</a>
                 </li>
             </ul>
-            <nav class="navbar bg-dark">
+            <nav class="navbar bg-navbar">
                 <div class="container-fluid">
-                    <form class="d-flex" role="search">
+                     <form class="d-flex" role="search">
                         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
                         <button class="btn btn-outline-primary" type="submit">Search</button>
                     </form>
                 </div>
             </nav>
-            <div class="d-flex justify-content-end mt-2 mr-3">
-                <button type="button" class="btn btn-primary me-2">Registrarse</button>
-                
-            </div>
+            
             
               
           </div>
       </div>
-    </nav>  
+        </nav>  
     
     <div class="signin d-flex justify-content-center align-items-center">
         <main class="form-signin w-100 m-10">        
