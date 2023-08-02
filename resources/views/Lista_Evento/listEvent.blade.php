@@ -55,9 +55,14 @@
         <!-- Bootstrap Album -->
         <div class="row my-3">
             <div class="col-12">
-              <a href="#" class="mr-3">
-                <img class="img-fluid" src="https://via.placeholder.com/200" alt="Image placeholder">
-              </a>
+            <div class="card m-2" style="width: 15rem;">
+                <img src="img/pagina_index/event-teatro.jpg" class="card-img-top mt-1" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+            </div>
               <a href="#" class="mr-3">
                 <img class="img-fluid" src="https://via.placeholder.com/200" alt="Image placeholder">
               </a>

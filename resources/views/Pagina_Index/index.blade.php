@@ -21,7 +21,7 @@
             <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Organizar</a>
+                        <a class="nav-link" href="Creacion_Eventos">Organizar</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Eventos</a>
@@ -29,10 +29,6 @@
                 </ul>
                 <nav class="navbar bg-navbar">
                     <div class="container-fluid">
-                        <form class="d-flex" role="search">
-                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                            <button class="btn btn-outline-primary" type="submit">Search</button>
-                        </form>
                     </div>
                 </nav>
                 <div class="btn-group" role="group" aria-label="Basic example">
@@ -61,7 +57,7 @@
             <div class="col-md-6 color text-center main-info">
                 <h1>Encuentra tu evento favorito y vive momentos inolvidables.</h1>
                 <p>Únete a nosotros y déjanos ser tu aliado confiable en el camino hacia eventos exitosos y llenos de magia.</p>
-                <button type="button" class="btn btn-primary">Empecemos!</button>
+                <a href="{{ route('register') }}"><button type="button" class="btn btn-primary">Empecemos!</button></a>
             </div>
         </div>
         <div class="row justify-content-center mt-5">
@@ -69,36 +65,36 @@
             <h1 class="text-center">Eventos proximos</h1>
 
             <div class="card m-2" style="width: 15rem;">
-                <img src="img/pagina_index/event-teatro.jpg" class="card-img-top mt-1" alt="...">
+                <img src="img/evento/portada.jpg" class="card-img-top mt-1" alt="..."height="200px" width="500px">
                 <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                  <h5 class="card-title">Cipotes</h5>
+                  <p class="card-text">Una adaptacion del libro de Ramon Amaya Amador. La obra incluye la dolorosa realidad que viven dos hermanitos por sobrevivir solos.</p>
                 </div>
+                <a href="{{url('evento')}}" class="btn btn-primary">Ir al evento</a>
             </div>
             <div class="card m-2" style="width: 15rem;">
-                <img src="img/pagina_index/event-teatro.jpg" class="card-img-top mt-1" alt="...">
+                <img src="img/pagina_index/Navidad.png" class="card-img-top mt-1" alt="..."height="200px" width="500px">
                 <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                  <h5 class="card-title">Reunion Navidad</h5>
+                  <p class="card-text">Encuentra todo lo que necesitas para crear un evento de empresa navideño que tus empleados SÍ van a recordar.</p>
                 </div>
+                <a href="#" class="btn btn-primary">Ir al evento</a>
             </div>
             <div class="card m-2" style="width: 15rem;">
-                <img src="img/pagina_index/event-teatro.jpg" class="card-img-top mt-1" alt="...">
+                <img src="img/pagina_index/halloween.jpg" class="card-img-top mt-1" alt="..."height="200px" width="500px">
                 <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                  <h5 class="card-title">Fiesta Halloween</h5>
+                  <p class="card-text">Una fiesta que se celebra el 31 de octubre, víspera de la fiesta cristiana occidental de Todos los Santos.</p>
                 </div>
+                <a href="#" class="btn btn-primary">Ir al evento</a>
             </div>
             <div class="card m-2" style="width: 15rem;">
-                <img src="img/pagina_index/event-teatro.jpg" class="card-img-top mt-1" alt="...">
+                <img src="img/pagina_index/Graduacion.jpg" class="card-img-top mt-1" alt="..." height="200px" width="500px">
                 <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                  <h5 class="card-title">Graduacion</h5>
+                  <p class="card-text">Ceremonia oficial que clausura el curso escolar o universitario y sirve de reconocimiento a los estudiantes que, a lo largo de él, han completado los requisitos académicos de un plan de estudios.</p>
                 </div>
+                <a href="#" class="btn btn-primary">Ir al evento</a>
             </div>
         </div>
       </main>
@@ -112,8 +108,9 @@
       
           <ul class="nav col-md-4 justify-content-end">
             <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary txt-red">Inicio</a></li>
-            <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary txt-red">Eventos</a></li>
-            <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary txt-red">Organizar</a></li>
+            <li class="nav-item"><a href="{{url('evento')}}" class="nav-link px-2 text-body-secondary txt-red">Eventos</a></li>
+            <li class="nav-item"><a href="{{url('/Lista_Evento')}}" class="nav-link px-2 text-body-secondary txt-red">Listado de Eventos</a></li>
+            <li class="nav-item"><a href="{{url('/Creacion_Eventos')}}" class="nav-link px-2 text-body-secondary txt-red">Organizar</a></li>
             <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary txt-red">FAQs</a></li>
             <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary txt-red">About</a></li>
           </ul>

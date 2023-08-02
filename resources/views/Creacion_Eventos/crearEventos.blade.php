@@ -10,26 +10,17 @@
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-navbar">
         <div class="container-fluid">
-            <a class="navbar-brand" href="index.html">Meeting APP</a>
+            <a class="navbar-brand" href="Pagina_Index">Meeting APP</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
                     <li class="nav-item">
-                        <a class="nav-link active" href="create-events.html">Organizar</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Eventos</a>
+                        <a class="nav-link" href="Lista_Evento">Eventos</a>
                     </li>
                 </ul>
                 <nav class="navbar bg-navbar">
-                    <div class="container-fluid">
-                        <form class="d-flex" role="search">
-                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                            <button class="btn btn-outline-primary" type="submit">Search</button>
-                        </form>
-                    </div>
                 </nav>
             </div>
         </div>
@@ -43,21 +34,32 @@
                 Verifica la informacion y envia tu solicitud, al ser recibida sera validada y nos pondremos en contacto.
             </p>
         </div>
-        <form class="row g-4 mt-3 pb-3 shadow-lg">
+
+
+        <form method="POST" action="/profile">
+        @csrf
+    
+        <!-- Equivalent to... -->
+        <input type="hidden" name="_token" value="{{ csrf_token() }}" />
+        </form>
+
+        
+        <form class="row g-4 mt-3 pb-3 shadow-lg" action="{{ route('Eventos.Registro')}}" method="POST">
+            @csrf
 
             <div class="col-6">
                 <label for="InputName" class="form-label">Nombre del evento</label>
-                <input type="text" class="form-control" id="InputName" placeholder="Nombre del evento">
+                <input type="text" name="even_nom" class="form-control" id="InputName" placeholder="Nombre del evento">
             </div>
 
             <div class="col-6">
                 <label for="InputAddress" class="form-label">Dirección del evento</label>
-                <input type="text" class="form-control" id="InputAddress" placeholder="Dirección del evento">
+                <input type="text" name="even_adrs" class="form-control" id="InputAddress" placeholder="Dirección del evento">
             </div>
 
             <div class="col-6">
                 <label for="InputDate" class="form-label">Fecha del evento</label>
-                <input type="date" class="form-control" id="InputDate" placeholder="Tema del evento">
+                <input type="date" name="even_date" class="form-control" id="InputDate" placeholder="Tema del evento">
             </div>
 
             <div class="col-6">
@@ -72,7 +74,7 @@
 
             <div class="col-12">
                 <label for="InputDesc" class="form-label">Descripción del evento</label>
-                <input type="text" class="form-control" id="InputDesc" placeholder="Descripción del evento">
+                <input type="text" name="even_desc" class="form-control" id="InputDesc" placeholder="Descripción del evento">
             </div>
 
             <div class="col-12">
@@ -80,6 +82,10 @@
                     <input type="checkbox" id="checkTerms" class="form-check-input">
                     <label for="checkTerms" class="form-check-label">Acepto los terminos</label>
                 </div>
+            </div>
+
+            <div class="col-12">
+                <button type="submit" class="btn btn-primary">Guardar Evento</button>
             </div>
 
         </form>
@@ -94,9 +100,8 @@
           </a>
       
           <ul class="nav col-md-4 justify-content-end">
-            <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary txt-red">Inicio</a></li>
-            <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary txt-red">Eventos</a></li>
-            <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary txt-red">Organizar</a></li>
+            <li class="nav-item"><a href="Pagina_Index" class="nav-link px-2 text-body-secondary txt-red">Inicio</a></li>
+            <li class="nav-item"><a href="Lista_Evento" class="nav-link px-2 text-body-secondary txt-red">Eventos</a></li>
           </ul>
         </footer>
     </div>

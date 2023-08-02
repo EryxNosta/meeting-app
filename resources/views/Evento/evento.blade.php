@@ -10,30 +10,23 @@
 <body>
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark navyb">
     <div class="container-fluid">
-        <a class="navbar-brand" href="index.html">Meeting APP</a>
+        <a class="navbar-brand" href="Pagina_Index">Meeting APP</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Organizar</a>
+                    <a class="nav-link" href="/Creacion_Eventos">Organizar</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Eventos</a>
+                    <a class="nav-link" href="/Lista_Evento">Eventos</a>
                 </li>
             </ul>
-            <nav class="navbar bg-dark">
-                <div class="container-fluid">
-                    <form class="d-flex" role="search">
-                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                        <button class="btn btn-outline-primary" type="submit">Search</button>
-                    </form>
-                </div>
-            </nav>
+
             <div class="btn-group" role="group" aria-label="Basic example">
-                <button type="button" class="btn btn-primary">Registrarse</button>
-                <button type="button" class="btn btn-primary">Iniciar Sesion</button>
+               <a href="/register"><button type="button" class="btn btn-primary">Registrarse</button></a>
+                <a href="/login"><button type="button" class="btn btn-primary">Iniciar Sesion</button></a>
             </div>
         </div>
     </div>
@@ -106,11 +99,8 @@
       </a>
   
       <ul class="nav col-md-4 justify-content-end redc" >
-        <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary redc">Home</a></li>
-        <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary redc">Features</a></li>
-        <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary redc">Pricing</a></li>
-        <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary redc">FAQs</a></li>
-        <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary redc">About</a></li>
+        <li class="nav-item"><a href="Pagina_Index" class="nav-link px-2 text-body-secondary redc">Inicio</a></li>
+        <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary redc">Acerca de Nosotros</a></li>
       </ul>
     </footer>
   </div>
