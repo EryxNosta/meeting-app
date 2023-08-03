@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
-    <title>Event List</title>
+    <title>Lista de Eventos</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -81,28 +81,29 @@
     </style>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-navbar">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark navyb">
         <div class="container-fluid">
-            <a class="navbar-brand" href="index.html">Meeting APP</a>
+            <a class="navbar-brand" href="Pagina_Index">Juntáte!</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
                     <li class="nav-item">
-                        <a class="nav-link active" href="create-events.html">Organizar</a>
+                        <a class="nav-link" href="/Creacion_Eventos">Organizar</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Eventos</a>
+                        <a class="nav-link" href="/Lista_Evento">Eventos</a>
                     </li>
                 </ul>
-                <nav class="navbar bg-navbar">
-                    <div class="container-fluid">
-                    </div>
-                </nav>
+    
+                <div class="btn-group" role="group" aria-label="Basic example">
+                   <a href="/register"><button type="button" class="btn btn-warning">Registrarse</button></a>
+                    <a href="/login"><button type="button" class="btn btn-warning">Iniciar Sesion</button></a>
+                </div>
             </div>
         </div>
-    </nav>
+      </nav>  
     <div class="container">
         <div class="text-center mt-3 pb-3">
             <h1>Lista de Eventos</h1>
@@ -136,7 +137,7 @@
 
     <div class="container mt-5 bg-y">
         <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
-          <p class="col-md-4 mb-0 text-body-secondary">&copy; 2023 Company, Inc</p>
+          <p class="col-md-4 mb-0 text-body-secondary">&copy; 2023 Júntate, Inc</p>
       
           <a href="" class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
             <svg class="bi me-2" width="40" height="32"><use xlink:href=""/></svg>

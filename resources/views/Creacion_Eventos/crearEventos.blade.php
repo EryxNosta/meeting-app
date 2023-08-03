@@ -8,23 +8,26 @@
     <title>Document</title>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-navbar">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark navyb">
         <div class="container-fluid">
-            <a class="navbar-brand" href="Pagina_Index">Meeting APP</a>
+            <a class="navbar-brand" href="Pagina_Index">Juntáte!</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
                     <li class="nav-item">
-                        <a class="nav-link" href="Lista_Evento">Eventos</a>
+                        <a class="nav-link" href="/Lista_Evento">Eventos</a>
                     </li>
                 </ul>
-                <nav class="navbar bg-navbar">
-                </nav>
+    
+                <div class="btn-group" role="group" aria-label="Basic example">
+                   <a href="/register"><button type="button" class="btn btn-warning">Registrarse</button></a>
+                    <a href="/login"><button type="button" class="btn btn-warning">Iniciar Sesion</button></a>
+                </div>
             </div>
         </div>
-    </nav>
+      </nav>  
     <div class="container">
         
         <div class="text-center mt-3 pb-3">

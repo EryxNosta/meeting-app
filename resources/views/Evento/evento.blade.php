@@ -10,7 +10,7 @@
 <body>
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark navyb">
     <div class="container-fluid">
-        <a class="navbar-brand" href="Pagina_Index">Meeting APP</a>
+        <a class="navbar-brand" href="Pagina_Index">Juntáte!</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -25,8 +25,8 @@
             </ul>
 
             <div class="btn-group" role="group" aria-label="Basic example">
-               <a href="/register"><button type="button" class="btn btn-primary">Registrarse</button></a>
-                <a href="/login"><button type="button" class="btn btn-primary">Iniciar Sesion</button></a>
+               <a href="/register"><button type="button" class="btn btn-warning">Registrarse</button></a>
+                <a href="/login"><button type="button" class="btn btn-warning">Iniciar Sesion</button></a>
             </div>
         </div>
     </div>
@@ -35,7 +35,7 @@
   <main class="container">
     <div class="row m-1 main-imgevent">
       <div class="col-md-12 img-fluid" >
-          <img src="img/evento/portada.jpg" width="100%" height="auto">
+          <img src="img/evento/portada.jpg" width="50%" height="auto">
       </div>
       
     </div>
@@ -92,7 +92,7 @@
   
   <div class="container yellowb ">
     <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
-      <p class="col-md-4 mb-0 text-body-secondary navyc yellowb">&copy; 2023 Company, Inc</p>
+      <p class="col-md-4 mb-0 text-body-secondary navyc yellowb">&copy; 2023 Juntáte, Inc</p>
   
       <a href="" class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
         <svg class="bi me-2" width="40" height="32"><use xlink:href=""/></svg>

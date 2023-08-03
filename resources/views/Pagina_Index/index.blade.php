@@ -8,13 +8,13 @@
     <link rel="preconnect" href="https://fonts.bunny.net">
     <link href="https://fonts.bunny.net/css?family=figtree:400,600&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="/css/pagina_index/style.css">
-    <title>Document</title>
+    <title>Juntáte!</title>
 </head>
 <body>
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-navbar">
         <div class="container-fluid">
-            <a class="navbar-brand" href="index.html">Meeting APP</a>
+            <a class="navbar-brand" href="Pagina_Index">Juntáte!</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -24,7 +24,7 @@
                         <a class="nav-link" href="Creacion_Eventos">Organizar</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Eventos</a>
+                        <a class="nav-link" href="Lista_Evento">Eventos</a>
                     </li>
                 </ul>
                 <nav class="navbar bg-navbar">
@@ -37,11 +37,12 @@
                       @auth
                           <a href="{{ url('/dashboard') }}" class="font-semibold text-gray-600 hover:text-gray-900 focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Dashboard</a>
                       @else
-                          <a href="{{ route('login') }}" class="font-semibold text-gray-600 hover:text-gray-900 focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Log in</a>
-  
+                        <button class="btn btn-warning"><a href="{{ route('login') }}" class="font-semibold font-black text-white-600 hover:text-white-100 focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Log in</a></button>
+
                           @if (Route::has('register'))
-                              <a href="{{ route('register') }}" class="ml-4 font-semibold text-gray-600 hover:text-gray-900 focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Registrate</a>
+                          <button class="btn btn-warning"><a href="{{ route('register') }}" class="ml-4 font-semibold text-gray-600 hover:text-gray-900 focus:outline focus:outline-2 focus:rounded-sm">Registrate</a></button>
                           @endif
+                          
                       @endauth
                   </div>
               @endif
@@ -73,10 +74,10 @@
                 <a href="{{url('evento')}}" class="btn btn-primary">Ir al evento</a>
             </div>
             <div class="card m-2" style="width: 15rem;">
-                <img src="img/pagina_index/Navidad.png" class="card-img-top mt-1" alt="..."height="200px" width="500px">
+                <img src="img/pagina_index/digital_week.webp" class="card-img-top mt-1" alt="..."height="200px" width="500px">
                 <div class="card-body">
-                  <h5 class="card-title">Reunion Navidad</h5>
-                  <p class="card-text">Encuentra todo lo que necesitas para crear un evento de empresa navideño que tus empleados SÍ van a recordar.</p>
+                  <h5 class="card-title">Digital Week USAP</h5>
+                  <p class="card-text">Acompañá a tus compañeros en su exposición</p>
                 </div>
                 <a href="#" class="btn btn-primary">Ir al evento</a>
             </div>
@@ -100,19 +101,12 @@
       </main>
       <div class="container bg-y">
         <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
-          <p class="col-md-4 mb-0 text-body-secondary">&copy; 2023 Company, Inc</p>
       
-          <a href="" class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
-            <svg class="bi me-2" width="40" height="32"><use xlink:href=""/></svg>
-          </a>
-      
-          <ul class="nav col-md-4 justify-content-end">
+          <ul class="nav col-md-11 justify-content-end">
             <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary txt-red">Inicio</a></li>
             <li class="nav-item"><a href="{{url('evento')}}" class="nav-link px-2 text-body-secondary txt-red">Eventos</a></li>
             <li class="nav-item"><a href="{{url('/Lista_Evento')}}" class="nav-link px-2 text-body-secondary txt-red">Listado de Eventos</a></li>
             <li class="nav-item"><a href="{{url('/Creacion_Eventos')}}" class="nav-link px-2 text-body-secondary txt-red">Organizar</a></li>
-            <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary txt-red">FAQs</a></li>
-            <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary txt-red">About</a></li>
           </ul>
         </footer>
       </div>
