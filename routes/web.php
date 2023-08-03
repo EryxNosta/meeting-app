@@ -42,14 +42,30 @@ Route::get('/api/events', [EventoController::class, 'searchByDate'])->name('even
 
 
 
+// Rutas improvisadas para poder entrar a las paginas especificas desde el servidor montado en Laragon. 
+// Solamente tienen que agarrar el nombre de la carpeta del archivo y pegarlo en el URL.
+// Ejemplo: Quiero entrar a la vista de eventos, entonces sería http://127.0.0.1:8000/Evento 
 
+Route::get('/', [landingController::class, 'index'])->name('landing.index');
 
+Route::get('/Creacion_Eventos', function () {
+    return view('.Creacion_Eventos/crearEventos');
+});
 
+Route::get('/Evento', function () {
+    return view('.Evento/evento');
+});
 
-Route::get('/Pagina_Index',[Pagina_Index::class,'Pagina_Index']);
+Route::get('/Lista_Evento', function () {
+    return view('.Lista_Evento/listEvent');
+});
 
 Route::get('/', function () {
-    return view('./Pagina_Index/index');
+    return view('.Pagina_Index/index');
+});
+
+Route::get('/Sign_in', function () {
+    return view('.Sign_in/sign');
 });
 
 Route::get('/dashboard', function () {

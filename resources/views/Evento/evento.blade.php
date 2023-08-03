@@ -4,29 +4,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/evento/cssevento.css">
+    <link rel="preconnect" href="https://fonts.bunny.net">
+    <link href="https://fonts.bunny.net/css?family=figtree:400,600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/css/evento/cssevento.css">
     <title>Evento</title>
 </head>
 <body>
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark navyb">
     <div class="container-fluid">
-        <a class="navbar-brand" href="Pagina_Index">Juntáte!</a>
+        <a class="navbar-brand" href="index.html">Meeting APP</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
                 <li class="nav-item">
-                    <a class="nav-link" href="/Creacion_Eventos">Organizar</a>
+                    <a class="nav-link" href="#">Organizar</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/Lista_Evento">Eventos</a>
+                    <a class="nav-link" href="#">Eventos</a>
                 </li>
             </ul>
-
+            <nav class="navbar bg-dark">
+                <div class="container-fluid">
+                    <form class="d-flex" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-primary" type="submit">Search</button>
+                    </form>
+                </div>
+            </nav>
             <div class="btn-group" role="group" aria-label="Basic example">
-               <a href="/register"><button type="button" class="btn btn-warning">Registrarse</button></a>
-                <a href="/login"><button type="button" class="btn btn-warning">Iniciar Sesion</button></a>
+                <button type="button" class="btn btn-primary">Registrarse</button>
+                <button type="button" class="btn btn-primary">Iniciar Sesion</button>
             </div>
         </div>
     </div>
@@ -35,7 +44,7 @@
   <main class="container">
     <div class="row m-1 main-imgevent">
       <div class="col-md-12 img-fluid" >
-          <img src="img/evento/portada.jpg" width="50%" height="auto">
+          <img src="img/evento/portada.jpg" width="100%" height="auto">
       </div>
       
     </div>
@@ -92,19 +101,22 @@
   
   <div class="container yellowb ">
     <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
-      <p class="col-md-4 mb-0 text-body-secondary navyc yellowb">&copy; 2023 Juntáte, Inc</p>
+      <p class="col-md-4 mb-0 text-body-secondary navyc yellowb">&copy; 2023 Company, Inc</p>
   
       <a href="" class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
         <svg class="bi me-2" width="40" height="32"><use xlink:href=""/></svg>
       </a>
   
       <ul class="nav col-md-4 justify-content-end redc" >
-        <li class="nav-item"><a href="Pagina_Index" class="nav-link px-2 text-body-secondary redc">Inicio</a></li>
-        <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary redc">Acerca de Nosotros</a></li>
+        <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary redc">Home</a></li>
+        <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary redc">Features</a></li>
+        <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary redc">Pricing</a></li>
+        <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary redc">FAQs</a></li>
+        <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary redc">About</a></li>
       </ul>
     </footer>
   </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
 </body>
 </html>

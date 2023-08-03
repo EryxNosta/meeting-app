@@ -10,7 +10,7 @@
 }
 
 body {
-    background-image: url(/img/sign_in/bglogin.jpg);
+    background-image: url(/public/img/sign_in/fondo.jpg);
     background-repeat: no-repeat;
     background-size: cover;    
     max-height: 100vh;
@@ -22,6 +22,8 @@ body {
 .main {
     flex: 1 !important;
 }
+
+
 
 .signin {
     width: 100%;
