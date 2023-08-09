@@ -21,7 +21,6 @@ class CreacionEventosController extends Controller
         $event->even_adrs=$request->even_adrs;
         $event->emp_id=1;
         $event->cat_id=1;
-
         $event->save();
     }
 

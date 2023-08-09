@@ -79,7 +79,7 @@
                   <h5 class="card-title">Digital Week USAP</h5>
                   <p class="card-text">Acompañá a tus compañeros en su exposición</p>
                 </div>
-                <a href="#" class="btn btn-primary">Ir al evento</a>
+                <a href="./Evento/evento2" class="btn btn-primary">Ir al evento</a>
             </div>
             <div class="card m-2" style="width: 15rem;">
                 <img src="img/pagina_index/halloween.jpg" class="card-img-top mt-1" alt="..."height="200px" width="500px">
@@ -87,7 +87,7 @@
                   <h5 class="card-title">Fiesta Halloween</h5>
                   <p class="card-text">Una fiesta que se celebra el 31 de octubre, víspera de la fiesta cristiana occidental de Todos los Santos.</p>
                 </div>
-                <a href="#" class="btn btn-primary">Ir al evento</a>
+                <a href="./Evento/evento3" class="btn btn-primary">Ir al evento</a>
             </div>
             <div class="card m-2" style="width: 15rem;">
                 <img src="img/pagina_index/Graduacion.jpg" class="card-img-top mt-1" alt="..." height="200px" width="500px">
@@ -95,7 +95,7 @@
                   <h5 class="card-title">Graduacion</h5>
                   <p class="card-text">Ceremonia oficial que clausura el curso escolar o universitario y sirve de reconocimiento a los estudiantes que, a lo largo de él, han completado los requisitos académicos de un plan de estudios.</p>
                 </div>
-                <a href="#" class="btn btn-primary">Ir al evento</a>
+                <a href="./Evento/evento4" class="btn btn-primary">Ir al evento</a>
             </div>
         </div>
       </main>
@@ -103,9 +103,9 @@
         <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
       
           <ul class="nav col-md-11 justify-content-end">
-            <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary txt-red">Inicio</a></li>
+            <li class="nav-item"><a href="{{url('/')}}" class="nav-link px-2 text-body-secondary txt-red">Inicio</a></li>
             <li class="nav-item"><a href="{{url('evento')}}" class="nav-link px-2 text-body-secondary txt-red">Eventos</a></li>
-            <li class="nav-item"><a href="{{url('/Lista_Evento')}}" class="nav-link px-2 text-body-secondary txt-red">Listado de Eventos</a></li>
+            <li class="nav-item"><a href="{{url('/Lista_Evento2')}}" class="nav-link px-2 text-body-secondary txt-red">Listado de Eventos</a></li>
             <li class="nav-item"><a href="{{url('/Creacion_Eventos')}}" class="nav-link px-2 text-body-secondary txt-red">Organizar</a></li>
           </ul>
         </footer>
