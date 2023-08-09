@@ -7,6 +7,7 @@ use App\Http\Controllers\Lista_Evento;
 use App\Http\Controllers\EventoController;
 use App\Http\Controllers\Pagina_Index;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\EventController;
 
 
 /*
@@ -29,6 +30,7 @@ Route::get('/Lista_Evento',[EventoController::class,'Lista_Evento']);
 Route::post('/Lista_Evento', [EventoController::class, 'getEventsByDateRange'])->name('eventos.search');
 Route::get('/api/events', [EventoController::class, 'searchByDate'])->name('eventos.search');
 
+Route::post('/events', [EventController::class, 'store'])->name('events.store');
 
 
 
