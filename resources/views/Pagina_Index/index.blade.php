@@ -8,31 +8,27 @@
     <link rel="preconnect" href="https://fonts.bunny.net">
     <link href="https://fonts.bunny.net/css?family=figtree:400,600&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="/css/pagina_index/style.css">
-    <title>Document</title>
+    <title>Juntáte!</title>
 </head>
 <body>
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-navbar">
         <div class="container-fluid">
-            <a class="navbar-brand" href="index.html">Meeting APP</a>
+            <a class="navbar-brand" href="Pagina_Index">Juntáte!</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Organizar</a>
+                        <a class="nav-link" href="Creacion_Eventos">Organizar</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Eventos</a>
+                        <a class="nav-link" href="Lista_Evento">Eventos</a>
                     </li>
                 </ul>
                 <nav class="navbar bg-navbar">
                     <div class="container-fluid">
-                        <form class="d-flex" role="search">
-                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                            <button class="btn btn-outline-primary" type="submit">Search</button>
-                        </form>
                     </div>
                 </nav>
                 <div class="btn-group" role="group" aria-label="Basic example">
@@ -41,11 +37,12 @@
                       @auth
                           <a href="{{ url('/dashboard') }}" class="font-semibold text-gray-600 hover:text-gray-900 focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Dashboard</a>
                       @else
-                          <a href="{{ route('login') }}" class="font-semibold text-gray-600 hover:text-gray-900 focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Log in</a>
-  
+                        <button class="btn btn-warning"><a href="{{ route('login') }}" class="font-semibold font-black text-white-600 hover:text-white-100 focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Log in</a></button>
+
                           @if (Route::has('register'))
-                              <a href="{{ route('register') }}" class="ml-4 font-semibold text-gray-600 hover:text-gray-900 focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Registrate</a>
+                          <button class="btn btn-warning"><a href="{{ route('register') }}" class="ml-4 font-semibold text-gray-600 hover:text-gray-900 focus:outline focus:outline-2 focus:rounded-sm">Registrate</a></button>
                           @endif
+                          
                       @endauth
                   </div>
               @endif
@@ -61,7 +58,7 @@
             <div class="col-md-6 color text-center main-info">
                 <h1>Encuentra tu evento favorito y vive momentos inolvidables.</h1>
                 <p>Únete a nosotros y déjanos ser tu aliado confiable en el camino hacia eventos exitosos y llenos de magia.</p>
-                <button type="button" class="btn btn-primary">Empecemos!</button>
+                <a href="{{ route('register') }}"><button type="button" class="btn btn-primary">Empecemos!</button></a>
             </div>
         </div>
         <div class="row justify-content-center mt-5">
@@ -69,53 +66,47 @@
             <h1 class="text-center">Eventos proximos</h1>
 
             <div class="card m-2" style="width: 15rem;">
-                <img src="img/pagina_index/event-teatro.jpg" class="card-img-top mt-1" alt="...">
+                <img src="img/evento/portada.jpg" class="card-img-top mt-1" alt="..."height="200px" width="500px">
                 <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                  <h5 class="card-title">Cipotes</h5>
+                  <p class="card-text">Una adaptacion del libro de Ramon Amaya Amador. La obra incluye la dolorosa realidad que viven dos hermanitos por sobrevivir solos.</p>
                 </div>
+                <a href="{{url('evento')}}" class="btn btn-primary">Ir al evento</a>
             </div>
             <div class="card m-2" style="width: 15rem;">
-                <img src="img/pagina_index/event-teatro.jpg" class="card-img-top mt-1" alt="...">
+                <img src="img/pagina_index/digital_week.webp" class="card-img-top mt-1" alt="..."height="200px" width="500px">
                 <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                  <h5 class="card-title">Digital Week USAP</h5>
+                  <p class="card-text">Acompañá a tus compañeros en su exposición</p>
                 </div>
+                <a href="#" class="btn btn-primary">Ir al evento</a>
             </div>
             <div class="card m-2" style="width: 15rem;">
-                <img src="img/pagina_index/event-teatro.jpg" class="card-img-top mt-1" alt="...">
+                <img src="img/pagina_index/halloween.jpg" class="card-img-top mt-1" alt="..."height="200px" width="500px">
                 <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                  <h5 class="card-title">Fiesta Halloween</h5>
+                  <p class="card-text">Una fiesta que se celebra el 31 de octubre, víspera de la fiesta cristiana occidental de Todos los Santos.</p>
                 </div>
+                <a href="#" class="btn btn-primary">Ir al evento</a>
             </div>
             <div class="card m-2" style="width: 15rem;">
-                <img src="img/pagina_index/event-teatro.jpg" class="card-img-top mt-1" alt="...">
+                <img src="img/pagina_index/Graduacion.jpg" class="card-img-top mt-1" alt="..." height="200px" width="500px">
                 <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                  <h5 class="card-title">Graduacion</h5>
+                  <p class="card-text">Ceremonia oficial que clausura el curso escolar o universitario y sirve de reconocimiento a los estudiantes que, a lo largo de él, han completado los requisitos académicos de un plan de estudios.</p>
                 </div>
+                <a href="#" class="btn btn-primary">Ir al evento</a>
             </div>
         </div>
       </main>
       <div class="container bg-y">
         <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
-          <p class="col-md-4 mb-0 text-body-secondary">&copy; 2023 Company, Inc</p>
       
-          <a href="" class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
-            <svg class="bi me-2" width="40" height="32"><use xlink:href=""/></svg>
-          </a>
-      
-          <ul class="nav col-md-4 justify-content-end">
+          <ul class="nav col-md-11 justify-content-end">
             <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary txt-red">Inicio</a></li>
-            <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary txt-red">Eventos</a></li>
-            <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary txt-red">Organizar</a></li>
-            <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary txt-red">FAQs</a></li>
-            <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary txt-red">About</a></li>
+            <li class="nav-item"><a href="{{url('evento')}}" class="nav-link px-2 text-body-secondary txt-red">Eventos</a></li>
+            <li class="nav-item"><a href="{{url('/Lista_Evento')}}" class="nav-link px-2 text-body-secondary txt-red">Listado de Eventos</a></li>
+            <li class="nav-item"><a href="{{url('/Creacion_Eventos')}}" class="nav-link px-2 text-body-secondary txt-red">Organizar</a></li>
           </ul>
         </footer>
       </div>
