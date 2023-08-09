@@ -10,7 +10,7 @@
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark navyb">
         <div class="container-fluid">
-            <a class="navbar-brand" href="Pagina_Index">Juntáte!</a>
+            <a class="navbar-brand" href="/">Juntáte!</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -96,16 +96,23 @@
 
     <div class="container mt-5 bg-y">
         <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
-          <p class="col-md-4 mb-0 text-body-secondary">&copy; 2023 Company, Inc</p>
+          <p class="col-md-4 mb-0 text-body-secondary">&copy; 2023 Juntáte, Inc</p>
       
           <a href="" class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
             <svg class="bi me-2" width="40" height="32"><use xlink:href=""/></svg>
           </a>
       
-          <ul class="nav col-md-4 justify-content-end">
-            <li class="nav-item"><a href="Pagina_Index" class="nav-link px-2 text-body-secondary txt-red">Inicio</a></li>
-            <li class="nav-item"><a href="Lista_Evento" class="nav-link px-2 text-body-secondary txt-red">Eventos</a></li>
-          </ul>
+          <ul class="nav col-md-4 justify-content-end redc">
+            <li class="nav-item"><a href="{{ url('/') }}"
+                    class="nav-link px-2 text-body-secondary redc">Inicio</a></li>
+            <li class="nav-item"><a href="{{ url('evento') }}"
+                    class="nav-link px-2 text-body-secondary redc">Eventos</a></li>
+            <li class="nav-item"><a href="{{ url('/Lista_Evento') }}"
+                    class="nav-link px-2 text-body-secondary redc">Listado de
+                    Eventos</a></li>
+            <li class="nav-item"><a href="{{ url('/Creacion_Eventos') }}"
+                    class="nav-link px-2 text-body-secondary redc">Organizar</a>
+            </li>
         </footer>
     </div>
 

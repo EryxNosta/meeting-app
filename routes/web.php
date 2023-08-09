@@ -21,23 +21,13 @@ use Illuminate\Support\Facades\Route;
 */
 Route::get('/evento',[evento::class,'viewEvents']);
 
-
 Route::get('/Creacion_Eventos',[CreacionEventosController::class,'Mostrar_Eventos']);
 Route::post('/Creacion_Eventos',[CreacionEventosController::class,'Registro_Eventos'])->name('Eventos.Registro');
-
-
-
 
 Route::get('/Lista_Evento',[EventoController::class,'Lista_Evento']);
 //Route::post('/Lista_Evento',[ListaEventoController::class,'Filtrar_Eventos'])->name('Eventos.Filtrar');
 Route::post('/Lista_Evento', [EventoController::class, 'getEventsByDateRange'])->name('eventos.search');
 Route::get('/api/events', [EventoController::class, 'searchByDate'])->name('eventos.search');
-
-
-
-
-
-
 
 
 
@@ -56,8 +46,20 @@ Route::get('/Evento', function () {
     return view('.Evento/evento');
 });
 
+Route::get('/Evento/evento2', function () {
+    return view('.Evento/evento2');
+});
+
+Route::get('/Evento/evento3', function () {
+    return view('.Evento/evento3');
+});
+
+Route::get('/Evento/evento4', function () {
+    return view('.Evento/evento4');
+});
+
 Route::get('/Lista_Evento', function () {
-    return view('.Lista_Evento/listEvent');
+    return view('.Lista_Evento/listEvent2');
 });
 
 Route::get('/', function () {
