@@ -8,7 +8,7 @@
     <title>Document</title>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark navyb">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark navyb" style="background-color: #00235B !important">
         <div class="container-fluid">
             <a class="navbar-brand" href="/">Juntáte!</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">

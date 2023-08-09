@@ -1,11 +1,12 @@
 @media only screen and (max-width: 580px) {
     .col-6 {
         width: 100% !important;
+    
     }
 }
 
 .bg-navbar{
-    background-color: #00235B;
+    background-color: #00235B !important;
 }
 
 .bg-y{
